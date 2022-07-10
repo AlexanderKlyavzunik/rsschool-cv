@@ -1,11 +1,126 @@
 <!doctype html>
 <html lang="ru">
 <head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
   <meta charset="utf-8" />
   <title></title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- ...    
+    <header class="header">
+      <nav class="nav">
+     <ul class="hr">
+      <li><a href="#contacts">Contacts</a></li>
+      <li>
+        <a href="#summary">Summary</a>
+      </li>
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+      <li>
+        <a href="#code">Code example</a>
+      </li>
+      <li>
+        <a href="#education">Education</a>
+      </li>
+      <li>
+        <a href="#english">English</a>
+      </li>
+     </ul>
+  </nav>
+    </header>
+
+    <main>
+      <div class="horizontal">
+<img src="jj" alt="photo of mine" class="horizontal">
+<p class="horizontal">
+  <p class="horizontal name"> Alexander Kliauzunik </p>
+  <hr style="width:20%;">
+  <p class="horizontal">FAMCS BSU student</p>
+  </p>
+</div>
+
+      <div id="contacts" class="horizontal">
+        <p>
+          <h3 class="sec">CONTACTS</h3>
+          <ul>
+            <li>
+              email: olegritov@mail.ru
+            </li>
+            <li>
+              github: <a target="_blank" href="https://github.com/AlexanderKlyavzunik">AlexanderKlyavzunik</a>
+            </li>
+            <li>
+              telegram: <a href="https://t.me/olegsandrrr">@olegsandrrr</a>
+            </li>
+          </ul>
+        </p>
+      </div>
+
+      <div id="summary" class="horizontal">
+        <p>
+          <h3 class="sec">SUMMARY</h3>
+          I've never seen myself as a web-developer, so my main language is C++, but I've also managed to develop a few skills in HTML/CSS \
+          I believe, that my ability to learn and to gain new skills will lead me through this path of becoming a proficient Developer.
+        </p>
+      </div>
+
+      <div id="skills" class="horizontal">
+        <p>
+          <h3 class="sec">SKILLS</h3>
+         <ul>
+          <li>C++, QT</li>
+          <li>HTML</li>
+          <li>CSS</li>
+         </ul>
+        </p>
+      </div>
+
+      <div id="code" class="horizontal">
+        <p>
+          <h3 class="sec">CODE EXAMPLE</h3>
+          <p>Following code is a timer realisation for C++, which outputs the amount of time beetween the object being constructed and destucted</p>
+         <pre> <code> 
+#pragma once
+#include<chrono>
+#include<iostream>
+class Simple_Timer
+{
+public:
+
+	Simple_Timer()
+    {
+	 start = std::chrono::high_resolution_clock::now();
+    }
+
+	~Simple_Timer()
+    {
+	 end = std::chrono::high_resolution_clock::now();
+	 std::chrono::duration<float>duration = end - start;
+	 std::cout << "completed in " << duration.count() << " seconds";
+    }
+
+private:
+	std::chrono::time_point<std::chrono::steady_clock> start, end;
+};
+          </code></pre>
+        </p>
+      </div>
+
+      <div id="education" class="horizontal">
+        <p>
+          <h3 class="sec">EDUCATION</h3>
+          FAMSC BSU
+        </p>
+      </div>
+
+      <div id="english" class="horizontal">
+        <p>
+          <h3 class="sec">ENGLISH</h3>
+          B2 - Intermediate
+        </p>
+      </div>
+    </main>
 </body>
 </html>

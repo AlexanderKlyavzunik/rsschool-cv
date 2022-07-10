@@ -1,1 +1,67 @@
-My Project
+:root{
+    --paleGreen: #829985;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto', Verdana, sans-serif;
+  }
+
+  .header{
+    background-color:#829985;
+  }
+
+.nav{
+    
+    align-items: center;
+}
+
+ul.hr {
+    display:flex;
+      padding: 4px;  
+      justify-content: center;
+     }
+               
+               
+     ul.hr li {
+        font-family: Verdana, sans-serif;
+      display: inline; /* Отображать как строчный элемент */
+      margin-right: 5%;
+      padding: 3px; /* Поля вокруг текста */
+              float: right;
+     }
+     ul.hr li a{
+        color:aliceblue;
+        text-decoration: none;
+     }
+     ul.hr li a:hover{
+            text-decoration: underline; /* Добавляем подчеркивание */
+     }
+
+     .horizontal{
+        display:inline;
+        margin-right: 10%;
+     }
+
+     .name{
+        font-size: 150%;
+        color: rgb(26, 43, 2);
+     }
+
+     li a{
+        color: var(--paleGreen);
+        text-decoration: none;
+     }
+     li a:hover{
+        text-decoration: underline; /* Добавляем подчеркивание */
+ }
+
+     .sec{
+        color: #678;
+     }
+
+     h3{
+        text-align: center;
+     }
