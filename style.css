@@ -41,7 +41,7 @@ ul.hr {
      }
 
      .horizontal{
-        display:inline;
+        display:flex;
         margin-right: 10%;
      }
 
@@ -57,11 +57,29 @@ ul.hr {
      li a:hover{
         text-decoration: underline; /* Добавляем подчеркивание */
  }
-
+a{
+   text-decoration: none;
+   color: black;
+}
      .sec{
         color: #678;
      }
 
      h3{
         text-align: center;
+     }
+
+     .par{
+      flex-direction: column;
+     }
+
+     .el{
+      width: 40%;
+      margin: 5%;
+      justify-content: space-between;
+     }
+
+     footer{
+      background-color: var(--paleGreen) ;
+      justify-content: space-between;
      }

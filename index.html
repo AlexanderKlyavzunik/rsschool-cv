@@ -34,14 +34,15 @@
     <main>
       <div class="horizontal">
 <img src="jj" alt="photo of mine" class="horizontal">
-<p class="horizontal">
-  <p class="horizontal name"> Alexander Kliauzunik </p>
+<p class="par">
+  <p class="name"> Alexander Kliauzunik </p>
   <hr style="width:20%;">
   <p class="horizontal">FAMCS BSU student</p>
   </p>
 </div>
 
-      <div id="contacts" class="horizontal">
+<section class="horizontal">
+      <div id="contacts" class="el">
         <p>
           <h3 class="sec">CONTACTS</h3>
           <ul>
@@ -58,15 +59,48 @@
         </p>
       </div>
 
-      <div id="summary" class="horizontal">
+      <div id="summary" class="el">
         <p>
           <h3 class="sec">SUMMARY</h3>
           I've never seen myself as a web-developer, so my main language is C++, but I've also managed to develop a few skills in HTML/CSS \
           I believe, that my ability to learn and to gain new skills will lead me through this path of becoming a proficient Developer.
         </p>
       </div>
+    </section>
 
-      <div id="skills" class="horizontal">
+    <section class="horizontal">
+    <div id="code" class="el">
+      <p>
+        <h3 class="sec">CODE EXAMPLE</h3>
+        <p>Following code is a timer realisation for C++, which outputs the amount of time beetween the object being constructed and destucted</p>
+       <pre> <code> 
+#pragma once
+#include<chrono>
+#include<iostream>
+class Simple_Timer
+{
+public:
+
+Simple_Timer()
+  {
+ start = std::chrono::high_resolution_clock::now();
+  }
+
+~Simple_Timer()
+  {
+ end = std::chrono::high_resolution_clock::now();
+ std::chrono::duration<float>duration = end - start;
+ std::cout << "completed in " << duration.count() << " seconds";
+  }
+
+private:
+std::chrono::time_point<std::chrono::steady_clock> start, end;
+};
+        </code></pre>
+      </p>
+    </div>
+    <div class="el par">
+      <div id="skills">
         <p>
           <h3 class="sec">SKILLS</h3>
          <ul>
@@ -77,50 +111,38 @@
         </p>
       </div>
 
-      <div id="code" class="horizontal">
-        <p>
-          <h3 class="sec">CODE EXAMPLE</h3>
-          <p>Following code is a timer realisation for C++, which outputs the amount of time beetween the object being constructed and destucted</p>
-         <pre> <code> 
-#pragma once
-#include<chrono>
-#include<iostream>
-class Simple_Timer
-{
-public:
+      
 
-	Simple_Timer()
-    {
-	 start = std::chrono::high_resolution_clock::now();
-    }
-
-	~Simple_Timer()
-    {
-	 end = std::chrono::high_resolution_clock::now();
-	 std::chrono::duration<float>duration = end - start;
-	 std::cout << "completed in " << duration.count() << " seconds";
-    }
-
-private:
-	std::chrono::time_point<std::chrono::steady_clock> start, end;
-};
-          </code></pre>
-        </p>
-      </div>
-
-      <div id="education" class="horizontal">
+      <div id="education">
         <p>
           <h3 class="sec">EDUCATION</h3>
           FAMSC BSU
         </p>
       </div>
 
-      <div id="english" class="horizontal">
+      <div id="english">
         <p>
           <h3 class="sec">ENGLISH</h3>
           B2 - Intermediate
         </p>
       </div>
-    </main>
+    </div>
+    </section>
+
+     </main>
+
+      <footer class="horizontal">
+<span>&#169 2022</span>
+
+<div>
+<a href="https://github.com/AlexanderKlyavzunik"><img src="gitHubLogo.jpg" alt="GitHub logo" >
+My GitHub
+</a>
+</div>
+
+<a href="https://rs.school/js/"><img src="" alt="RS-School logo"></a>
+
+      </footer>
+   
 </body>
 </html>
